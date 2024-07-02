@@ -1,4 +1,5 @@
 import react, {useState} from 'react';
+import TodoForm from './TodoForm';
 import './App.css'
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
   return (
     <div className="container mx-auto p-4 max-w-md">
       <h1 className="text-3xl font-bold text-center mb-4">ToDo App</h1>
-
+      <TodoForm addTodo={addTodo} />
     </div>
   );
 }

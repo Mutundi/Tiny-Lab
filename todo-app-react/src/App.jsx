@@ -1,5 +1,6 @@
 import react, {useState} from 'react';
 import TodoForm from './TodoForm';
+import TodoList from './TodoList'
 import './App.css'
 
 const App = () => {
@@ -17,7 +18,7 @@ const App = () => {
   //A function to toggle complete
   const toggleComplete = (index) => {
     const newTodos = [...todos];
-    newTodos[index].complete = !newTodos[index].complete;
+    newTodos[index].completed = !newTodos[index].completed;
     setTodos(newTodos);
   };
 
@@ -32,6 +33,7 @@ const App = () => {
     <div className="container mx-auto p-4 max-w-md">
       <h1 className="text-3xl font-bold text-center mb-4">ToDo App</h1>
       <TodoForm addTodo={addTodo} />
+      <TodoList toggleComplete={toggleComplete} deleteTodo={deleteTodo} todos={todos} />
     </div>
   );
 }

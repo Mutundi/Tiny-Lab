@@ -37,7 +37,7 @@ const LoginButton = (props) => {
 
 const LogoutButton = (props) => {
   return (
-  <button onClick={props.onclick}>
+  <button onClick={props.onClick}>
     Logout
   </button>
     );
